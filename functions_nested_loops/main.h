@@ -2,3 +2,4 @@
 #define main.h
 
 int -putchar.c(char);
+#endif
