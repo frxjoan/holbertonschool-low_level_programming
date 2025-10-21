@@ -10,7 +10,7 @@ char i;
 
 for (i = 'a'; i <= 'z'; ++i)
 {
-putchar("%d", i);
+putchar(i);
 }
 return (0);
 }
