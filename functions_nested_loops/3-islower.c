@@ -9,7 +9,7 @@
  */
 int _islower(int c)
 {
-int l;
+char l;
 for (l = "a"; l <= "z"; l++)
 {
 if (l == c)
