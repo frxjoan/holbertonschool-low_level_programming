@@ -1,0 +1,22 @@
+#include "main.h"
+/**
+ * function_name - print alphabet *10
+ * @void: void
+(* a blank line
+ * Description: it's in the title
+(* section header: main h)*
+ * Return: abcd...
+ */
+void print_alphabet_x10(void)
+{
+int i
+char c
+for (i = 0; i <= 10; i++)
+{
+for (c = 'a'; c <= 'z'; c++)
+{
+putchar(c);
+}
+}
+putchar('\n');
+}
