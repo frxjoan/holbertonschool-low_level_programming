@@ -21,7 +21,7 @@ for (dm = 0; dm <= 5; dm++)
 {
 for (um = 0; um <= 9; um++)
 {
-if (dh != 2 && uh != 3 && dm != 5 && um != 9)
+if ((dh != 2 && uh != 3) && (dm != 5 && um != 9))
 {
 _putchar(dh + '0');
 _putchar(uh + '0');
