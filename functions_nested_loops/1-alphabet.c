@@ -1,9 +1,13 @@
 #include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_alphabet - print alphabet
+ * @void: void
+(* blank line
+ * Description: print alphabet isn't it clear ?
+(* section header: include mainh)*
+ * Return: still return alphabet
  */
+
 void print_alphabet(void)
 {
 char c;
