@@ -19,6 +19,6 @@ else
 {
 v = -v;
 _putchar(v + '0');
-return (n % 10);
+return (v);
 }
 }
