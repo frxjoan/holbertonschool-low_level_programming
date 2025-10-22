@@ -15,11 +15,13 @@ int dm;
 int um;
 for (dh = 0; dh <= 2; dh++)
 {
-for (uh = 0; uh <= 3; uh++)
+for (uh = 0; uh <= 9; uh++)
 {
 for (dm = 0; dm <= 5; dm++)
 {
 for (um = 0; um <= 9; um++)
+{
+if (dh != 2 && uh != 3 && dm != 5 && um != 9)
 {
 _putchar(dh + '0');
 _putchar(uh + '0');
@@ -27,6 +29,7 @@ _putchar(':');
 _putchar(dm + '0');
 _putchar(um + '0');
 _putchar('\n');
+}
 }
 }
 }
