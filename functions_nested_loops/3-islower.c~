@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _islower - detect lowercase
- * @c: the letter to check
+ * @int: the letter to check
 (* a blank line
  * Description: no
 (* section header: mainh)*
@@ -9,7 +9,10 @@
  */
 int _islower(int c)
 {
-if (c >= 'a' && c <= 'z')
+char l;
+for (l = "a"; l <= "z"; l++)
+{
+if (l == c)
 {
 _putchar('1');
 }
