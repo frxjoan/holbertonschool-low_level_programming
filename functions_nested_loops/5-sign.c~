@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_sign - Short description, single line
- * @n: Description of parameter x
+ * n: Description of parameter x
 (* a blank line
  * Description: Longer description of the function)?
 (* section header: Section description)*
@@ -11,14 +11,14 @@ int print_sign(int n)
 {
 if (n > 0)
 {
-return ('+');
+_putchar('+');
 }
 else if (n == 0)
 {
-return ('0');
+_putchar('0');
 }
 else
 {
-return ('-');
+putchar('-');
 }
 }
