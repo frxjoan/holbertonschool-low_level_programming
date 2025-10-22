@@ -1,0 +1,23 @@
+#include "main.h"
+/**
+ * _islower - detect lowercase
+ * @c: the letter to check
+(* a blank line
+ * Description: no
+(* section header: mainh)*
+ * Return: 1 or 0 a int to say true or false
+ */
+int _islower(int c)
+{
+int l;
+for (l = "a"; l <= "z"; l++)
+{
+if (l == c)
+{
+_putchar('1');
+}
+else
+{
+_putchar('0');
+}
+}
