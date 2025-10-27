@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isdigit - Short description, single line
+ * _isupper - Short description, single line
  * @c: Description of parameter x
 (* a blank line
  * Description: Longer description of the function)?
@@ -8,9 +8,9 @@
  * Return: Description of the returned value
  */
 
-int _isdigit(int c)
+int _isupper(int c)
 {
-	if (c > "A" && c < "Z")
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
