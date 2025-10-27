@@ -12,7 +12,7 @@ int main(void)
 	{
 		if (i != 100)
 		{
-			if (i % 3 == 0 && i % 5 == 5)
+			if (i % 3 == 0 && i % 5 == 0)
 			{
 				printf("FizzBuzz ");
 			}
