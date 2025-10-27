@@ -1,0 +1,28 @@
+#include "main.h"
+/**
+ * print_diagonal - Short description, single line
+ * @n: Description of parameter x
+(* a blank line
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
+ */
+void print_diagonal(int n)
+{
+	int i;
+
+	if (n != 0)
+	{
+		_putchar('/');
+		_putchar('\n')
+		for (i = 1; i <= n; i++)
+		{
+			for (j = i + 1; j <= n; j++)
+			{
+				_putchar(' ');
+			}
+			_putchar('/');
+			_putchar('\n');
+		}
+	}
+}
