@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * reset_to_98 - Short description, single line
- * @*n: Description of parameter x
+ * @n: Description of parameter x
 (* a blank line
  * Description: Longer description of the function)?
 (* section header: Section description)*
