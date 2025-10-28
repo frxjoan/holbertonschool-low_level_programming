@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_array - Short description, single line
  * @a: Description of parameter x
@@ -12,5 +13,10 @@ void print_array(int *a, int n)
 	int i;
 
 	for (i = 0; i <= n; i++)
-		printf("%d, ", a[i]);
+	{
+		if (i != n)
+			printf("%d, ", a[i]);
+		else
+			printf("%d", a[i]);
+	}
 }
