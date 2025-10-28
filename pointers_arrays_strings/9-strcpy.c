@@ -10,6 +10,16 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	dest = src;
-	return (dest);
+	int i = 0;
+	char *dest0 = dest;
+
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		dest ++;
+		src ++;
+	}
+	*dest = '\0';
+
+	return (dest0);
 }
