@@ -10,19 +10,23 @@
 char *cap_string(char *p)
 {
 	char *c = p;
-	char lst[' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'];
-	int i;
+	char lst[12] = {' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}','\n'};
+	int *i = lst;
 
 	while (*p != '\0')
 	{
 		if (*p >= 'a' && *p <= 'z')
 		{
-			for (i = 0; i <= 10; i++)
-				if (*p == lst[i])
+			while (*i != '\n')
+				if (*p == *i)
 				{
-					p + 1 -= 32;
+					p = p + 1;
+					*p -= 32;
 				}
+				i++;
+			*i = lst;
 		}
 		p++;
 	}
+	return (c);
 }
