@@ -20,7 +20,7 @@ char *_strncpy(char *dest, char *src, int n)
 		dest++;
 		src++;
 	}
-	if (n >= i + 1)
+	if (n > i + 2)
 	{
 		for (i = i; i <= n && *dest != '\0'; i++)
 		{
@@ -28,5 +28,5 @@ char *_strncpy(char *dest, char *src, int n)
 			dest++;
 		}
 	}
-	return odest;
+	return (odest);
 }
