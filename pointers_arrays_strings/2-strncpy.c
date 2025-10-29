@@ -12,7 +12,6 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	char *odest = dest;
-	char *bdest;
 	int i;
 
 	for (i = 0; i < n && *src != '\0'; i++)
@@ -21,7 +20,6 @@ char *_strncpy(char *dest, char *src, int n)
 		dest++;
 		src++;
 	}
-	bdest = dest;
 	if (n >= i)
 	{
 		for (i = i; i <= n && *dest != '\0'; i++)
