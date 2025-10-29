@@ -13,7 +13,7 @@ char *cap_string(char *p)
 	char lst[13] = {' ', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}','\n', '\t'};
 	int i;
 
-	while (*p != '\0')
+	do while (*p != '\0')
 	{
 		for (i = 0; i <= 13; i++)
 			if (*p == lst[i])
