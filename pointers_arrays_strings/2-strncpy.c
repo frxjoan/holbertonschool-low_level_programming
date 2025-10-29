@@ -14,15 +14,15 @@ char *_strncpy(char *dest, char *src, int n)
 	char *odest = dest;
 	int i;
 
-	for (i = 0; i < n && *src != '\0'; i++)
+	for (i = 0; i < n; i++)
 	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	if (n > i + 2)
-	{
-		for (i = i; i <= n && *dest != '\0'; i++)
+		if (*src != '\0')
+		{
+			*dest = *src;
+			dest++;
+			src++;
+		}
+		else
 		{
 			*dest = '\0';
 			dest++;
