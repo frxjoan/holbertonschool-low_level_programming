@@ -20,7 +20,7 @@ char *_strncpy(char *dest, char *src, int n)
 		dest++;
 		src++;
 	}
-	if (n >= i)
+	if (n >= i + 1)
 	{
 		for (i = i; i <= n && *dest != '\0'; i++)
 		{
