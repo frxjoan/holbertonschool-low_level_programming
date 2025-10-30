@@ -14,16 +14,17 @@ int _atoi(char *s)
 
 	while (*s != '\0')
 	{
-		if (*s < '0' && *s > '9')
-		{
-			res *= 10;
-			res += *s;
-		}
-		else if (*s == '-')
-			n = n * -1;
-		else if (*(s + 1) < '0' && *(s + 1) > '9')
-			break;
-		s++;
+		
+			if (*s >= '0' && *s <= '9')
+			{
+				res *= 10;
+				res += *s - 48;
+			}
+			else if (*s == '-')
+				n = n * -1;
+			else if (*(s + 1) < '0' && *(s + 1) > '9')
+				return (res * n);
+			s++;
 	}
 	return (res * n);
 }
