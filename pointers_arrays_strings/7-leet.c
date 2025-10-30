@@ -9,21 +9,24 @@
  */
 char *leet(char *p)
 {
-	char tab1[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	int tab2[] = {4, 4, 3, 3, 0, 0, 7, 7, 1, 1}
+	char tab1[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char tab2[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 	int i = 0;
 	int j = 0;
-	char *pc = p
+	char *pc = p;
 
 	while (*p != '\0')
 	{
 		while (i != 9 && j != 9)
 		{
 			if (*p == tab1[i])
-				*p = tab2[j]
+				*p = tab2[j];
 			i++;
 			j++;
 		}
+		p++;
+		i = 0;
+		j = 0;
 	}
 	return (pc);
 }
