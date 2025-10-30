@@ -17,7 +17,7 @@ char *leet(char *p)
 
 	while (*p != '\0')
 	{
-		while (i != 9 && j != 9)
+		while (i != 10 && j != 10)
 		{
 			if (*p == tab1[i])
 				*p = tab2[j];
