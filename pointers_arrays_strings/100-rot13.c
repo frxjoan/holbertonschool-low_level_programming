@@ -11,8 +11,8 @@ char *rot13(char *p)
 {
 	char *pc = p;
 	int i;
-	char alphabet1[] = "abcdefghijklmABCDEFGHIJKLM"
-	char alphabet2[] = "nopqrstuvwxyzNOPQRSTUVWXYZ"
+	char alphabet1[] = "abcdefghijklmABCDEFGHIJKLM";
+	char alphabet2[] = "nopqrstuvwxyzNOPQRSTUVWXYZ";
 	
 	while (*p != '\0')
 	{
