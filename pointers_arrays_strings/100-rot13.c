@@ -16,7 +16,7 @@ char *rot13(char *p)
 	{
 		while ((*p >= 'a' && *p <= 'z') && (*p >= 'A' && *p <= 'Z'))
 		{
-			if (*s <= 'm')
+			if (*p <= 'm')
 				*p += 13;
 			else
 				*p -= 13;
