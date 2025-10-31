@@ -11,21 +11,15 @@ char *rot13(char *p)
 {
 	char *pc = p;
 	int i;
-	char alphabet1[] = "abcdefghijklmABCDEFGHIJKLM";
-	char alphabet2[] = "nopqrstuvwxyzNOPQRSTUVWXYZ";
 	
 	while (*p != '\0')
-	{
-		for (i = 0; i <= 25; i++)
+	{ 
+		while ((*p >= 'a' && *p <= 'z') && (*p >= 'A' && *p <= 'Z'))
 		{
-			if (*p == alphabet1[i])
-			{
-				*p = alphabet2[i];
-			}
+			if (*s <= 'm')
+				*p += 13;
 			else
-			{
-				*p = alphabet1[i];
-			}
+				*p -= 13;
 		}
 	}
 	return (pc);
