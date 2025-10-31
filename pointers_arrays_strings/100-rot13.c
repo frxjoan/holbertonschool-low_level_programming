@@ -18,9 +18,9 @@ char *rot13(char *p)
 	{
 		for (i = 0; i <= 25; i++)
 		{
-			if (*s == alphabet1[i] || *s == alphabet2[i])
+			if (*p == alphabet1[i] || *p == alphabet2[i])
 			{
-				*s = alphabet2[i] || *s = alphabet1[i];
+				*p = alphabet2[i] || *p = alphabet1[i];
 			}
 		}
 	}
