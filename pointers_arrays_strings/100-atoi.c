@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * function_name - Short description, single line
- * @parameterx: Description of parameter x
+ * _atoi - Short description, single line
+ * @s: Description of parameter x
 (* a blank line
  * Description: Longer description of the function)?
 (* section header: Section description)*
@@ -14,30 +14,16 @@ int _atoi(char *s)
 
 	while (*s != '\0')
 	{
-		if (res == 0)
+		if (*s >= '0' && *s <= '9')
 		{
-			if (*s >= '0' && *s <= '9')
-			{
-				res *= 10;
-				res += *s - 48;
-			}
-			else if (*s == '-')
-				n = n * -1;
-			s++;
+			res *= 10;
+			res += *s - 48;
 		}
-		else
-		{
-			if (*(s + 1) >= '0' && *(s + 1) <= '9')
-			{
-				if (*s >= '0' && *s <= '9')
-				{
-					res *= 10;
-					res += *s - 48;
-					s++;
-				}
-			}
-		}
-		
+		else if (*s == '-')
+			n = n * -1;
+		else if (res != 0)
+			break;
+		s++;
 	}
 	return (res * n);
 }
