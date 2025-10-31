@@ -9,7 +9,7 @@
  */
 char *rot13(char *p)
 {
-	*pc = p;
+	char *pc = p;
 	int i;
 	char alphabet1[] = "abcdefghijklmABCDEFGHIJKLM"
 	char alphabet2[] = "nopqrstuvwxyzNOPQRSTUVWXYZ"
