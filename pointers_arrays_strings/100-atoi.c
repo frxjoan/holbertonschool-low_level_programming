@@ -11,8 +11,8 @@ int _atoi(char *s)
 {
 	int res = 0;
 	int n = 1;
-	int INT_MAX = 2147483647
-	int INT_MAX = (-INT_MAX - 1)
+	int INT_MAX = 2147483647;
+	int INT_MIN = (-INT_MAX - 1);
 
 	while (*s != '\0')
 	{
@@ -24,13 +24,13 @@ int _atoi(char *s)
 
 			if (n == 1)
 			{
-				if (res > (INT_MAX - digit) / 10)
+				if (res > (INT_MAX - num) / 10)
 					return (INT_MAX);
 				res = res * 10 + num;
 			}
 			else
 			{
-				if (res > (-(INT_MIN + digit)) / 10)
+				if (res > (-(INT_MIN + num)) / 10)
 					return (INT_MIN);
 				res = res * 10 - num;
 			}
