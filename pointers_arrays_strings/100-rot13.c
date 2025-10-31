@@ -11,17 +11,17 @@ char *rot13(char *p)
 {
 	char *pc = p;
 	
-	while (*p != '\0')
+	while (*pc != '\0')
 	{
-		while ((*p >= 'a' && *p <= 'z') && (*p >= 'A' && *p <= 'Z'))
+		while ((*pc >= 'a' && *pc <= 'z') && (*pc >= 'A' && *pc <= 'Z'))
 		{
-			if (*p <= 'm')
+			if (*pc <= 'm')
 			{
-				*p += 13;
+				*pc += 13;
 				break;
 			}
-			*p -= 13;
+			*pc -= 13;
 		}
 	}
-	return (pc);
+	return (p);
 }
