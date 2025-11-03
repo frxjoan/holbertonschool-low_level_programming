@@ -4,25 +4,31 @@
  * @s: Description of parameter x
  * @accept: D
 (* a blank line
- * Description: calcule la longueur du segment initial de s qui ne contient que des caracteres dans accept.
+ * Description: Longer description of the function)?
 (* section header: Section description)*
  * Return: Description of the returned value
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	compteur = 0;
 	char *p = accept;
+	char *ptr = s;
+	int compteur = 0;
 
-	while (*s != '\0')
+	while (*ptr != '\0')
 	{
 		while (*p != '\0')
 		{
-			if (*p == *s)
+			if (*ptr == *p)
+			{
 				compteur += 1;
-			else
-				
-
+				break;
+			}
+			p++;
 		}
+		if (*ptr != *p)
+			return (compteur);
+		*p = accept;
+		ptr++;
 	}
 	return (compteur);
 }
