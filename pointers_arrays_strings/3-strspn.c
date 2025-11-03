@@ -27,7 +27,7 @@ unsigned int _strspn(char *s, char *accept)
 		}
 		if (*ptr != *p)
 			return (compteur);
-		*p = &accept;
+		p = accept;
 		ptr++;
 	}
 	return (compteur);
