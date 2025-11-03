@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * function_name - Short description, single line
- * @parameterx: Description of parameter x
+ * _strpbrk - Short description, single line
+ * @s: Description of parameter x
+ * @accept: D
 (* a blank line
  * Description: Longer description of the function)?
 (* section header: Section description)*
@@ -14,16 +15,16 @@ char *_strpbrk(char *s, char *accept)
 
 	while (*ptr != '\0')
 	{
-			while (*p != '\0')
+		while (*p != '\0')
+		{
+			if (*ptr == *p)
 			{
-					if (*ptr == *p)
-					{
-							return (ptr);
-					}
-					p++;
+				return (ptr);
 			}
-			p = accept;
-			ptr++;
+			p++;
+		}
+		p = accept;
+		ptr++;
 	}
 	return (0);
 }
