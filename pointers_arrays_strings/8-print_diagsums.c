@@ -9,12 +9,12 @@ void print_diagsums(int *a, int size)
 {
 	int i;
 	int suma = 0;
-    int sumb = 0;
+	int sumb = 0;
 
-    for (i = 0; i < size; i++)
-    {
-        suma += a[size * i + i];
-        sumb += a[size * i + (size - 1 - i)];
-    }
-    printf("%d, %d\n", suma, sumb);
+	for (i = 0; i < size; i++)
+	{
+		suma += a[size * i + i];
+		sumb += a[size * i + (size - 1 - i)];
+	}
+	printf("%d, %d\n", suma, sumb);
 }
