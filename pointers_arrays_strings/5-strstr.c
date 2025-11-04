@@ -13,23 +13,21 @@ char *_strstr(char *haystack, char *needle)
 	char *jm = haystack;
 	char *pjm = needle;
 
-	while (*jm != '\0')
+	if (*needle == '\0')
+		return (haystack);
+	while (*haystack != '\0')
 	{
-		if (*jm == *pjm)
-		{
-			haystack = jm;
-			while (*pjm != '\0')
-			{
-				if (*jm != *pjm && *pjm != '\0')
-					break;
-				jm++;
-				pjm++;
-			}
-		}
-		if (*jm == *pjm)
-			return (haystack);
+		jm = haystack;
 		pjm = needle;
-		jm++;
+		while (*jm == *pjm && *pjm != '\0' && *jm != '\0')
+		{
+
+			jm++;
+			pjm++;
+		}
+		if (*pjm == '\0')
+			return (haystack);
+		haystack++;
 	}
-	return ('\0');
+	return (0);
 }
