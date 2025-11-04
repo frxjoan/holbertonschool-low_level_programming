@@ -2,6 +2,9 @@
 /**
  * factorial - Short description, single line
  * @n: Description of parameter x
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
  */
 int factorial(int n)
 {

@@ -21,6 +21,7 @@ char *_strstr(char *haystack, char *needle)
 		pjm = needle;
 		while (*jm == *pjm && *pjm != '\0' && *jm != '\0')
 		{
+
 			jm++;
 			pjm++;
 		}
