@@ -17,19 +17,13 @@ int main(int argc, char **argv)
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (ispunct(argv[i][j]))
+			if (ispunct(argv[i][j]) || isalpha(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
-			else if (isalpha(argv[i][j]))
-			{
-				printf("%d\n", 0);
-				return (0);
-			}
-			else if (isdigit(argv[i][j]))
-				sum += atoi(argv[i]);
 		}
+		sum += atoi(argv[i]);
 	}
 
 	printf("%d\n", sum);
