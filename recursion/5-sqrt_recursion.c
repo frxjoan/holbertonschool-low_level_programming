@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * _sqrt_recursion - Short description, single line
+ * _sqrt_check - Short description, single line
  * @n: Description of parameter x
+ * @i: Description of parameter x
  * Return: un int
  */
 int _sqrt_check(int n, int i)
