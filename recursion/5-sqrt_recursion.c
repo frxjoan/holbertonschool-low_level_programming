@@ -1,17 +1,25 @@
 #include "main.h"
 /**
- * factorial - Short description, single line
+ * _sqrt_recursion - Short description, single line
  * @n: Description of parameter x
+ * Return: un int
+ */
+int _sqrt_check(int n, int i)
+{
+	if (i * i == n)
+		return (i);
+	if (i * i > n)
+		return (-1);
+	return (_sqrt_check(n, i + 1));
+}
+/**
+ * _sqrt_recursion - s
+ * @n: s
+ * Return: s
  */
 int _sqrt_recursion(int n)
 {
-	int i = n;
-
 	if (n < 0)
 		return (-1);
-	else if (n == 0)
-		return (0);
-	else if (i * i != n)
-		i = i / n + 1;
-	return (i * i == _sqrt_recursion(n));
+	return (_sqrt_check(n, 1));
 }
