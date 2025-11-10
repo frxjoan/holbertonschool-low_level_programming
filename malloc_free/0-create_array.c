@@ -2,8 +2,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * function_name - Short description, single line
- * @parameterx: Description of parameter x
+ * create_array - Short description, single line
+ * @size: Description of parameter x
+ * @c: D
 (* a blank line
  * Description: Longer description of the function)?
 (* section header: Section description)*
@@ -13,8 +14,8 @@ char *create_array(unsigned int size, char c)
 {
 	char *tab;
 	unsigned int i;
-	tab = malloc(size * sizeof(char));
 
+	tab = malloc(size * sizeof(char));
 	if (size == 0)
 		return (0);
 	if (tab == NULL)

@@ -14,16 +14,16 @@ int **alloc_grid(int width, int height)
 {
 	int i;
 	int j;
-	int **tab = malloc(width * sizeof(int));
+	int **tab = malloc(height * sizeof(int *));
 
-	for (i = 0; i < width; i++)
-		tab[i] = malloc(height * sizeof(int));
+	if (tab == NULL)
+		return (0);
+	for (i = 0; i < height; i++)
+		tab[i] = malloc(width * sizeof(int));
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
-		{
 			tab[i][j] = 0;
-		}
 	}
 	return (tab);
 }
