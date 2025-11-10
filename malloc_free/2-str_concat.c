@@ -1,30 +1,39 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+/**
+ * str_concat - Short description, single line
+ * @str: Description of parameter x
+ * Return: Description of the returned value
+ */
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 /**
  * str_concat - Short description, single line
  * @s1: Description of parameter x
  * @s2: D
- * Description: Longer description of the function)?
-(* section header: Section description)*
  * Return: Description of the returned value
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned long int i;
-	unsigned long int j;
+	int j;
+	int k;
 	char *ptr;
 
 	ptr = malloc((sizeof(s1) + sizeof(s2)) * sizeof(char));
 	if (s1 == NULL || s2 == NULL)
 		return (0);
-	for (i = 0; i < strlen(s1); i++)
-		ptr[i] = s1[i];
-	for (j = 0; j < strlen(s2); j++)
+	for (j = 0; j < _strlen(s1); j++)
+		ptr[j] = s1[j];
+	for (k = 0; k < _strlen(s2); k++)
 	{
-		ptr[i] = s2[j];
-		i++;
+		ptr[j] = s2[k];
+		j++;
 	}
 	return (ptr);
 }
