@@ -1,0 +1,29 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+/**
+ * alloc_grid - Short description, single line
+ * @width: Description of parameter x
+ * @height: D
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
+ */
+int **alloc_grid(int width, int height)
+{
+	int i;
+	int j;
+	int **tab = malloc(width * sizeof(int));
+
+	for (i = 0; i < width; i++)
+		tab[i] = malloc(height * sizeof(int));
+	for (i = 0; i < height; i++)
+	{
+		for (j = 0; j < width; j++)
+		{
+			tab[i][j] = 0;
+		}
+	}
+	return (tab);
+}
