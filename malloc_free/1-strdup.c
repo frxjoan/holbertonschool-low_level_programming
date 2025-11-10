@@ -1,23 +1,32 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
+/**
+ * _strlen - Short description, single line
+ * @str: Description of parameter x
+ * Return: fzifhzpi
+ */
+int _strlen(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 /**
  * _strdup - Short description, single line
  * @str: Description of parameter x
-(* a blank line
- * Description: Longer description of the function)?
-(* section header: Section description)*
- * Return: Description of the returned value
+ * Return: fzifhzpi
  */
 char *_strdup(char *str)
 {
-	unsigned long int i;
+	int i;
 	char *ptr;
 
 	ptr = malloc(sizeof(str) * sizeof(char));
 	if (ptr == NULL || str == NULL)
 		return (0);
-	for (i = 0; i <= sizeof(str) + 1; i++)
+	for (i = 0; i <= _strlen(str); i++)
 		ptr[i] = str[i];
 	return (ptr);
 }
