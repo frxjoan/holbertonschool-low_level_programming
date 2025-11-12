@@ -1,7 +1,5 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 /**
  * alloc_grid - Short description, single line
  * @width: Description of parameter x
