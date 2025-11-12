@@ -7,7 +7,7 @@
  * Description: Longer description of the function)?
  * Return: Description of the returned value
  */
-void _calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
 	int i, total = size * nmemb;
