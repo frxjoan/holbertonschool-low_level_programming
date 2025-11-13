@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - Short description, single line
+ * _strlen - Short description, single line
  * @str: Description of parameter x
  * Return: Description of the returned value
  */
