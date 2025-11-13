@@ -23,7 +23,7 @@ int _strlen(char *str)
  */
 char *str_concat(char *s1, char *s2)
 {
-	int j, k, len1, len2;
+	int j, k, len1, len2, len;
 	char *ptr;
 
 	if (s1 == NULL)
