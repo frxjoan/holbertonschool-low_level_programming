@@ -7,9 +7,9 @@
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_char(va_list arg, int *bool)
+void print_char(va_list *arg, int *bool)
 {
-	char l = va_arg(arg, int);
+	char l = va_arg(*arg, int);
 
 	if (*bool == 0)
 		printf(", ");
@@ -22,9 +22,9 @@ void print_char(va_list arg, int *bool)
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_int(va_list arg, int *bool)
+void print_int(va_list *arg, int *bool)
 {
-	int x = va_arg(arg, int);
+	int x = va_arg(*arg, int);
 
 	if (*bool == 0)
 		printf(", ");
@@ -37,9 +37,9 @@ void print_int(va_list arg, int *bool)
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_float(va_list arg, int *bool)
+void print_float(va_list *arg, int *bool)
 {
-	double n = va_arg(arg, double);
+	double n = va_arg(*arg, double);
 
 	if (*bool == 0)
 		printf(", ");
@@ -52,9 +52,9 @@ void print_float(va_list arg, int *bool)
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_str(va_list arg, int *bool)
+void print_str(va_list *arg, int *bool)
 {
-	char *s = va_arg(arg, char *);
+	char *s = va_arg(*arg, char *);
 	char *tmp = s;
 
 	if (*bool == 0)
@@ -91,7 +91,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tab[j].type)
 			{
-				tab[j].form(arg, bool);
+				tab[j].form(&arg, bool);
 			}
 			j++;
 		}
