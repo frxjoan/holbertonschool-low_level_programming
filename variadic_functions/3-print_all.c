@@ -1,33 +1,62 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-void print_char(char l, int *bool)
+/**
+ * print_char - Short description, single line
+ * @arg: Description of parameter x;:
+ * @bool: Description of parameter x;:
+ * Return: Description of the returned value
+ */
+void print_char(va_list arg, int *bool)
 {
+	char l = va_arg(arg, int);
+
 	if (*bool == 0)
 		printf(", ");
 	printf("%c", l);
 	*bool = 0;
 }
-
-void print_int(int x, int *bool)
+/**
+ * print_int - Short description, single line
+ * @arg: Description of parameter x;:
+ * @bool: Description of parameter x;:
+ * Return: Description of the returned value
+ */
+void print_int(va_list arg, int *bool)
 {
+	int x = va_arg(arg, int);
+
 	if (*bool == 0)
 		printf(", ");
 	printf("%d", x);
 	*bool = 0;
 }
-
-void print_float(double n, int *bool)
+/**
+ * print_float - Short description, single line
+ * @arg: Description of parameter x;:
+ * @bool: Description of parameter x;:
+ * Return: Description of the returned value
+ */
+void print_float(va_list arg, int *bool)
 {
+	double n = va_arg(arg, double);
+
 	if (*bool == 0)
 		printf(", ");
 	printf("%f", n);
 	*bool = 0;
 }
-
-void print_str(char *s, int *bool)
+/**
+ * print_str - Short description, single line
+ * @arg: Description of parameter x;:
+ * @bool: Description of parameter x;:
+ * Return: Description of the returned value
+ */
+void print_str(va_list arg, int *bool)
 {
+	char *s = va_arg(arg, char *);
 	char *tmp = s;
+
 	if (*bool == 0)
 		printf(", ");
 	if (tmp == NULL)
@@ -43,10 +72,31 @@ void print_str(char *s, int *bool)
 void print_all(const char * const format, ...)
 {
 	va_list arg;
-	int i = 0;
-	int bool = 1;
-
+	int i = 0, j = 0;
+	int bouboule = 1;
+	int *bool = &bouboule;
+	format_f tab[] = {
+		{'c', print_char},
+		{'i', print_int},
+		{'f', print_float},
+		{'s', print_str},
+		{'\0', NULL}
+	};
 	va_start(arg, format);
 
+	while (format != NULL && format[i] != '\0')
+	{
+		j = 0;
+		while (tab[j].type != '\0')
+		{
+			if (format[i] == tab[j].type)
+			{
+				tab[j].form(arg, bool);
+			}
+			j++;
+		}
+		i++;
+	}
 	va_end(arg);
+	printf("\n");
 }
