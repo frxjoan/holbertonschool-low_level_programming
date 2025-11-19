@@ -4,7 +4,6 @@
 /**
  * print_char - Short description, single line
  * @arg: Description of parameter x;:
- * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
 void print_char(va_list arg)
@@ -17,7 +16,6 @@ void print_char(va_list arg)
 /**
  * print_int - Short description, single line
  * @arg: Description of parameter x;:
- * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
 void print_int(va_list arg)
@@ -29,7 +27,6 @@ void print_int(va_list arg)
 /**
  * print_float - Short description, single line
  * @arg: Description of parameter x;:
- * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
 void print_float(va_list arg)
@@ -41,7 +38,6 @@ void print_float(va_list arg)
 /**
  * print_str - Short description, single line
  * @arg: Description of parameter x;:
- * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
 void print_str(va_list arg)
