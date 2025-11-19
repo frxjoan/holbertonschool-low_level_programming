@@ -7,11 +7,11 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-typedef void (*print_everything)(va_list *, int *);
 
-typedef struct {
-	char format;
-	print_everything f;
-} formater;
+typedef struct
+{
+	char type;
+	void (*form)(va_list arg, int *bool);
+}format_f;
 
 #endif
