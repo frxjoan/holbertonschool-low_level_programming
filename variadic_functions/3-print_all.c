@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
+#include <stdlib.h>
 #include <stdio.h>
 /**
  * print_char - Short description, single line
@@ -77,7 +78,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tab[j].type)
 			{
-				if (!boule)
+				if (boule == 0)
 					printf(", ");
 				tab[j].form(arg);
 				boule = 0;
