@@ -74,7 +74,7 @@ void print_all(const char * const format, ...)
 	va_list arg;
 	int i = 0, j = 0;
 	int bouboule = 1;
-	int *bool = &bouboule;
+	int *boule = &bouboule;
 	format_f tab[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -91,7 +91,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tab[j].type)
 			{
-				tab[j].form(arg, bool);
+				tab[j].form(arg, boule);
 			}
 			j++;
 		}
