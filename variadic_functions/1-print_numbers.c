@@ -1,7 +1,6 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
 /**
  * print_numbers - Short description, single line
  * @separator: Description of parameter x;:
@@ -10,11 +9,11 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list(arg);
+	va_list arg;
 	unsigned int i;
 
 	va_start(arg, n);
-	if (*separator != '\0')
+	if (separator != NULL)
 	{
 		for (i = 0; i < n; i++)
 		{
@@ -30,4 +29,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%d", va_arg(arg, int));
 		printf("\n");
 	}
+	va_end(arg);
 }
