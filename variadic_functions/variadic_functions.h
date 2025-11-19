@@ -12,6 +12,6 @@ typedef struct
 {
 	char type;
 	void (*form)(va_list arg, int *bool);
-}format_f;
+} format_f;
 
 #endif
