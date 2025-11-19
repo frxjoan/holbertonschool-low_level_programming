@@ -7,14 +7,12 @@
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_char(va_list arg, int *bool)
+void print_char(va_list arg)
 {
 	char l = va_arg(arg, int);
 
-	if (*bool == 0)
-		printf(", ");
 	printf("%c", l);
-	*bool = 0;
+
 }
 /**
  * print_int - Short description, single line
@@ -22,14 +20,11 @@ void print_char(va_list arg, int *bool)
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_int(va_list arg, int *bool)
+void print_int(va_list arg)
 {
 	int x = va_arg(arg, int);
 
-	if (*bool == 0)
-		printf(", ");
 	printf("%d", x);
-	*bool = 0;
 }
 /**
  * print_float - Short description, single line
@@ -37,14 +32,11 @@ void print_int(va_list arg, int *bool)
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_float(va_list arg, int *bool)
+void print_float(va_list arg)
 {
 	double n = va_arg(arg, double);
 
-	if (*bool == 0)
-		printf(", ");
 	printf("%f", n);
-	*bool = 0;
 }
 /**
  * print_str - Short description, single line
@@ -52,17 +44,16 @@ void print_float(va_list arg, int *bool)
  * @bool: Description of parameter x;:
  * Return: Description of the returned value
  */
-void print_str(va_list arg, int *bool)
+void print_str(va_list arg)
 {
 	char *s = va_arg(arg, char *);
-	char *tmp = s;
 
-	if (*bool == 0)
-		printf(", ");
-	if (tmp == NULL)
-		tmp = "(nil)";
-	printf("%s", tmp);
-	*bool = 0;
+	if (s == NULL)
+	{
+		printf("(nil)");
+		return;
+	}
+	printf("%s", s);
 }
 /**
  * print_all - Short description, single line
@@ -73,8 +64,7 @@ void print_all(const char * const format, ...)
 {
 	va_list arg;
 	int i = 0, j = 0;
-	int bouboule = 1;
-	int *boule = &bouboule;
+	int boule = 1;
 	format_f tab[] = {
 		{'c', print_char},
 		{'i', print_int},
@@ -91,7 +81,10 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == tab[j].type)
 			{
-				tab[j].form(arg, boule);
+				if (!boule)
+					printf(", ");
+				tab[j].form(arg);
+				boule = 0;
 			}
 			j++;
 		}
