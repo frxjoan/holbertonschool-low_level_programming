@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists"
 /**
  * list_len - singly linked list
  * @h: string - (malloc'ed string)
