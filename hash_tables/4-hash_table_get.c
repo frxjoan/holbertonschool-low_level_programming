@@ -24,15 +24,7 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	while (tmp)
 	{
 		if (strcmp(tmp->key, key) == 0)
-		{
-			if (tmp->value)
-			{
-				printf("%s:%s\n", tmp->key, tmp->value);
-				return (tmp->value);
-			}
-			printf("%s:(null)\n", tmp->key);
 			return (tmp->value);
-		}
 		tmp = tmp->next;
 	}
 	return (NULL);
