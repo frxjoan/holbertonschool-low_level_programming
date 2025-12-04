@@ -3,9 +3,38 @@
 #include <string.h>
 
 /**
- * key_index - creates a hash table
+ * addnode - singly linked list
+ * @head: string - (malloc'ed string)
+ * @key: string - (malloc'ed string)
+ * @value: string - (malloc'ed string)
+ * Return: size
+ */
+hash_node_t *addnode(hash_node_t **head, const char *key, const char *value)
+{
+	hash_node_t *node = malloc(sizeof(hash_node_t));
+
+	if (node == NULL)
+		return (NULL);
+	node->key = strdup(key);
+	node->value = strdup(value);
+
+	if (!node->key || !node->value)
+	{
+		free(node->key);
+		free(node->value);
+		free(node);
+		return (NULL);
+	}
+	node->next = *head;
+	*head = node;
+	return (node);
+}
+
+/**
+ * hash_table_set - creates a hash table
+ * @ht: key
  * @key: key
- * @size: size of the array
+ * @value: size of the array
  *
  * Return: pointer to the new table, or NULL on failure
  */
