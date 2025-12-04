@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * hash_table_set - creates a hash table
+ * hash_table_get - creates a hash table
  * @ht: key
  * @key: key
  *
